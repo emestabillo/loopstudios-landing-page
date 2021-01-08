@@ -58,25 +58,6 @@ $font-body: "Alata", sans-serif;
   box-sizing: inherit;
 }
 
-//MAIN STYLES
-html {
-  box-sizing: border-box;
-  font-size: 15px;
-}
-
-body {
-  font-family: $font-body;
-  margin: 0 auto;
-  background-color: burlywood;
-  max-width: 96rem;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 body,
 h1,
 h2,
@@ -95,6 +76,20 @@ ul {
 ol,
 ul {
   list-style: none;
+}
+
+//MAIN STYLES
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  font-family: $font-body;
+  margin: 0 auto;
+  background-color: burlywood;
+  max-width: 96rem;
+  position: relative; //skip links
 }
 
 a,

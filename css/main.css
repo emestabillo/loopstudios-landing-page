@@ -7,26 +7,6 @@
           box-sizing: inherit;
 }
 
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 15px;
-}
-
-body {
-  font-family: "Alata", sans-serif;
-  margin: 0 auto;
-  background-color: burlywood;
-  max-width: 96rem;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 body,
 h1,
 h2,
@@ -45,6 +25,20 @@ ul {
 ol,
 ul {
   list-style: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  margin: 0 auto;
+  background-color: burlywood;
+  max-width: 96rem;
+  position: relative;
 }
 
 a:focus,
@@ -96,13 +90,27 @@ img {
 }
 
 .header {
-  background: url("/images/mobile/image-hero.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)));
-  background: url("/images/mobile/image-hero.jpg"), linear-gradient(rgba(0, 0, 0, 0.4));
+  background-image: url("/images/mobile/image-hero.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)));
+  background-image: url("/images/mobile/image-hero.jpg"), linear-gradient(rgba(0, 0, 0, 0.4));
   background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   min-height: 43.3rem;
   padding-top: 2.67rem;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    background-image: url("/images/desktop/image-hero.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)));
+    background-image: url("/images/desktop/image-hero.jpg"), linear-gradient(rgba(0, 0, 0, 0.4));
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 4.26rem 0 9.73rem;
+  }
 }
 
 .header a {
@@ -116,8 +124,22 @@ img {
   max-width: 32rem;
 }
 
+@media screen and (min-width: 992px) {
+  #main {
+    max-width: 43.3rem;
+    padding: 2.67rem;
+  }
+}
+
 #main h1 {
   font-size: 2.67rem;
+}
+
+@media screen and (min-width: 992px) {
+  #main h1 {
+    font-size: 4.8rem;
+    line-height: 97%;
+  }
 }
 
 .nav {
@@ -137,6 +159,7 @@ img {
 @media screen and (min-width: 992px) {
   .nav__logo, .nav__toggle {
     position: unset;
+    z-index: initial;
   }
 }
 
@@ -170,20 +193,38 @@ img {
 
 @media screen and (min-width: 992px) {
   .nav__wrapper {
-    position: inherit;
+    position: unset;
     z-index: 0;
     visibility: inherit;
     opacity: 1;
     background: inherit;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-transform: initial;
+            transform: initial;
+    text-transform: capitalize;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -webkit-column-gap: 2.13rem;
+            column-gap: 2.13rem;
   }
 }
 
 .nav__wrapper li {
   padding-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__wrapper li {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav__wrapper li {
+    padding: 0;
+  }
 }
 
 .nav__wrapper a {
@@ -194,13 +235,6 @@ img {
   position: relative;
 }
 
-@media screen and (min-width: 992px) {
-  .nav__wrapper a {
-    position: unset;
-    font-size: initial;
-  }
-}
-
 .nav__wrapper a::after {
   content: "";
   position: absolute;
@@ -208,8 +242,8 @@ img {
   opacity: 0;
   height: 2px;
   left: 0;
-  bottom: -2px;
-  background-color: #c355d8;
+  bottom: -0.43rem;
+  background-color: white;
   -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
@@ -217,6 +251,13 @@ img {
 .nav__wrapper a:hover::after {
   opacity: 1;
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .nav__wrapper a {
+    font-size: initial;
+    line-height: 167%;
+  }
 }
 
 .nav .active {
