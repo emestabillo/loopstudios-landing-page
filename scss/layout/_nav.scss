@@ -1,0 +1,89 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo,
+  &__toggle {
+    position: relative;
+    z-index: 100;
+
+    @include lg {
+      position: unset;
+    }
+  }
+
+  &__toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    padding: 14.87rem 1.67rem;
+    background-color: $clr-black;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-out;
+
+    @include lg {
+      position: inherit;
+      z-index: 0;
+      visibility: inherit;
+      opacity: 1;
+      background: inherit;
+      padding: 0;
+
+      display: flex;
+    }
+
+    li {
+      padding-bottom: 1.6rem;
+    }
+
+    a {
+      font-family: $font-heading;
+      font-size: 1.6rem;
+      transition: border 0.3s ease-out;
+      position: relative;
+
+      @include lg {
+        position: unset;
+        font-size: initial;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        opacity: 0;
+        height: 2px;
+        left: 0;
+        bottom: -2px;
+        background-color: $clr-pink;
+        transition: width 0.2s ease;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+
+  .active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateX(0);
+  }
+}

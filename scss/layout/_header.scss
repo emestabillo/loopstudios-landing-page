@@ -1,0 +1,25 @@
+.header {
+  background: url("/images/mobile/image-hero.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  color: $clr-white;
+  min-height: 43.3rem;
+  padding-top: 2.67rem;
+  text-transform: uppercase;
+
+  a {
+    color: $clr-white;
+  }
+}
+
+#main {
+  margin-top: 10.87rem;
+  padding: 1.6rem;
+  border: 1px solid $clr-white;
+  max-width: 32rem;
+
+  h1 {
+    // text-transform: uppercase;
+    font-size: 2.67rem;
+  }
+}
