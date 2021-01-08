@@ -68,8 +68,6 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
-  padding: 0;
   font-weight: normal;
 }
 
@@ -87,9 +85,13 @@ html {
 body {
   font-family: $font-body;
   margin: 0 auto;
-  background-color: burlywood;
+  // background-color: burlywood;
   max-width: 96rem;
   position: relative; //skip links
+
+  @media screen and (min-width: 1441px) {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0.2);
+  }
 }
 
 a,

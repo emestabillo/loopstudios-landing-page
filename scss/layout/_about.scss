@@ -1,0 +1,47 @@
+.about {
+  padding: 6.4rem 0;
+  text-align: center;
+
+  &__content {
+    @include xl {
+      display: flex;
+      text-align: left;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+  &__text {
+    padding: 3.2rem 1rem 0;
+
+    @include xl {
+      position: relative;
+      z-index: 2;
+      margin-left: -10.73rem;
+      padding: 6.4rem 0 0 6.4rem;
+      align-self: flex-end;
+      background-color: $clr-white;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2.13rem;
+
+    @include xl {
+      font-size: 3.2rem;
+    }
+  }
+
+  p {
+    opacity: 0.5;
+    line-height: 167%;
+    padding-top: 1.07rem;
+
+    @include lg {
+      padding-top: 1.67rem;
+    }
+  }
+}
