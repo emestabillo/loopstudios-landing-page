@@ -38,6 +38,13 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 1441px) {
+  body {
+    -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
 a:focus,
 button:focus,
 .skip-links:focus {
@@ -51,11 +58,14 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
 }
 
-img {
+img,
+picture {
   max-width: 100%;
   height: auto;
   display: block;
@@ -65,10 +75,11 @@ img {
   background: #c355d8;
   color: #fff;
   padding: 4px;
-  top: 2px;
+  left: 8px;
+  top: 0;
   position: absolute;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -84,6 +95,32 @@ img {
   width: 90%;
   max-width: 73.3rem;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.cta {
+  color: black;
+  font-size: 0.93rem;
+  letter-spacing: 0.33rem;
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.73rem 2.67rem;
+}
+
+.cta:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .cta {
+    padding: 0.73rem 0;
+  }
 }
 
 .header {
@@ -300,7 +337,6 @@ img {
 }
 
 .about h2 {
-  text-transform: uppercase;
   font-size: 2.13rem;
 }
 
@@ -319,6 +355,142 @@ img {
 @media screen and (min-width: 992px) {
   .about p {
     padding-top: 1.67rem;
+  }
+}
+
+.creations {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 6.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .creations__content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 8.53rem 1fr;
+        grid-template-rows: 8.53rem 1fr;
+        grid-template-areas: "title cta" "gallery gallery";
+  }
+}
+
+.creations h2 {
+  padding-bottom: 3.2rem;
+  font-size: 2.13rem;
+}
+
+@media screen and (min-width: 768px) {
+  .creations h2 {
+    grid-area: title;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .creations h2 {
+    font-size: 3.2rem;
+  }
+}
+
+.creations__gallery {
+  grid-area: gallery;
+}
+
+@media screen and (min-width: 768px) {
+  .creations__gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(14rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 2rem;
+  }
+}
+
+.creations picture {
+  position: relative;
+}
+
+.creations picture::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.601863)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
+}
+
+.creations picture:hover::before {
+  background: rgba(255, 255, 255, 0.75071);
+}
+
+.creations figure {
+  position: relative;
+  margin-bottom: 1.6rem;
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .creations figure {
+    margin-bottom: 0;
+  }
+}
+
+.creations img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.creations img:hover {
+  background-color: rgba(255, 255, 255, 0.75071);
+}
+
+@media screen and (min-width: 768px) {
+  .creations img {
+    max-height: 30rem;
+  }
+}
+
+.creations figcaption {
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 1.3rem;
+  left: 1.3rem;
+  width: 8.2rem;
+  text-align: left;
+  z-index: 5;
+}
+
+@media screen and (min-width: 768px) {
+  .creations figcaption {
+    font-size: 2.13rem;
+    width: 11.3rem;
+  }
+}
+
+.creations__link {
+  grid-area: cta;
+  margin-top: 0.67rem;
+}
+
+.creations__link:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .creations__link {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    width: 10.47rem;
+    height: 2.67rem;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

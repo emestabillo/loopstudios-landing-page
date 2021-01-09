@@ -6,29 +6,9 @@ $clr-gray: hsl(0, 0%, 55%);
 $clr-dark-gray: hsl(0, 0%, 41%);
 $clr-pink: #c355d8;
 
-// //Fonts
+//Fonts
 $font-heading: "Josefin Sans", sans-serif;
 $font-body: "Alata", sans-serif;
-// //Transitions
-// $animate: all 0.3s ease-in-out;
-
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes slideUp {
-//   0% {
-//     transform: translateY(5rem);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
 
 //MEDIA QUERIES
 @mixin med {
@@ -85,12 +65,11 @@ html {
 body {
   font-family: $font-body;
   margin: 0 auto;
-  // background-color: burlywood;
   max-width: 96rem;
-  position: relative; //skip links
+  position: relative;
 
   @media screen and (min-width: 1441px) {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0.2);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -105,19 +84,17 @@ button,
 a {
   text-decoration: none;
   transition: 0.2s ease;
-
-  // &:focus {
-  //   outline: 2px dotted $clr-pink;
-  // }
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: $font-heading;
+  text-transform: uppercase;
 }
 
-img {
-  //responsive images
+img,
+picture {
   max-width: 100%;
   height: auto;
   display: block;
@@ -127,12 +104,17 @@ img {
   background: $clr-pink;
   color: #fff;
   padding: 4px;
-  top: 2px;
+  left: 8px;
+  top: 0;
   position: absolute;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: transform 0.3s;
 }
 
 .skip-links:focus {
   transform: translateY(0%);
 }
+
+// .no-scroll {
+//   overflow: hidden;
+// }

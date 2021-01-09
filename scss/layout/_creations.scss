@@ -1,0 +1,118 @@
+.creations {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 6.4rem;
+
+  &__content {
+    @include med {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 8.53rem 1fr;
+      grid-template-areas: "title cta" "gallery gallery";
+    }
+  }
+
+  h2 {
+    padding-bottom: 3.2rem;
+    font-size: 2.13rem;
+
+    @include med {
+      grid-area: title;
+      justify-self: start;
+    }
+
+    @include lg {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__gallery {
+    grid-area: gallery;
+    @include med {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 2rem;
+    }
+  }
+
+  &__project {
+  }
+
+  picture {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.0001) 0%,
+        rgba(0, 0, 0, 0.601863) 100%
+      );
+    }
+    &:hover::before {
+      background: rgba(255, 255, 255, 0.75071);
+    }
+  }
+
+  figure {
+    position: relative;
+    margin-bottom: 1.6rem;
+    z-index: 3;
+
+    @include med {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    width: 100%;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.75071);
+    }
+
+    @include med {
+      max-height: 30rem;
+    }
+  }
+
+  figcaption {
+    font-family: $font-heading;
+    color: $clr-white;
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 1.3rem;
+    left: 1.3rem;
+    width: 8.2rem;
+    text-align: left;
+    z-index: 5;
+
+    @include med {
+      font-size: 2.13rem;
+      width: 11.3rem;
+    }
+  }
+
+  &__link {
+    grid-area: cta;
+    margin-top: 0.67rem;
+
+    &:hover {
+      background-color: $clr-black;
+      color: $clr-white;
+    }
+
+    @include med {
+      justify-self: end;
+      width: 10.47rem;
+      height: 2.67rem;
+      margin-top: 0;
+    }
+  }
+}
