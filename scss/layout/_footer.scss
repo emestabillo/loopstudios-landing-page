@@ -1,0 +1,95 @@
+.footer {
+  background-color: $clr-black;
+  padding-top: 3.73rem;
+  text-align: center;
+  color: $clr-white;
+
+  &__contents {
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "logo icons" "nav copyright";
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+
+    @include lg {
+      grid-area: logo;
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    padding: 2.13rem 0 3.2rem;
+
+    @include lg {
+      grid-area: nav;
+      display: flex;
+      gap: 2.13rem;
+      padding: 0;
+    }
+
+    li:not(:last-child) {
+      padding-bottom: 1.06rem;
+
+      @include lg {
+        padding: 0;
+      }
+    }
+
+    a {
+      color: $clr-white;
+      line-height: 167%;
+      position: relative;
+    }
+  }
+
+  &__icons {
+    grid-area: icons;
+    padding-bottom: 1.07rem;
+    display: flex;
+    gap: 1.07rem;
+    justify-content: center;
+
+    @include lg {
+      justify-content: flex-end;
+    }
+
+    a {
+      position: relative;
+    }
+
+    .underline::after {
+      bottom: -2.2rem;
+      width: 1.5rem;
+      left: -0.73rem;
+      transition: all 0.2s ease;
+    }
+  }
+
+  p {
+    opacity: 0.5;
+    padding-bottom: 2.73rem;
+
+    @include lg {
+      grid-area: copyright;
+      text-align: right;
+    }
+  }
+
+  .attribution {
+    font-size: 0.73rem;
+    text-align: center;
+    opacity: 0.8;
+    color: $clr-gray;
+
+    a {
+      font-size: inherit;
+      color: $clr-white;
+      text-decoration: none;
+    }
+  }
+}

@@ -25,3 +25,22 @@
     padding: 0.73rem 0;
   }
 }
+
+.underline {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    height: 2px;
+    left: 0;
+    bottom: -0.43rem;
+    background-color: $clr-white;
+    transition: width 0.2s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    width: 100%;
+  }
+}

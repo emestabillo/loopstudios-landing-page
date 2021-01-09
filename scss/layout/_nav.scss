@@ -69,23 +69,6 @@
       transition: border 0.3s ease-out;
       position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        opacity: 0;
-        height: 2px;
-        left: 0;
-        bottom: -0.43rem;
-        background-color: $clr-white;
-        transition: width 0.2s ease;
-      }
-
-      &:hover::after {
-        opacity: 1;
-        width: 100%;
-      }
-
       @include lg {
         font-size: initial;
         line-height: 167%;
