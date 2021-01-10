@@ -51,7 +51,6 @@
     a {
       color: $clr-white;
       line-height: 167%;
-      position: relative;
     }
   }
 
@@ -68,17 +67,6 @@
     @include lg {
       justify-content: flex-end;
       padding-bottom: 0;
-    }
-
-    a {
-      position: relative;
-    }
-
-    .underline::after {
-      bottom: -2.2rem;
-      width: 1.5rem;
-      left: -0.73rem;
-      transition: all 0.2s ease;
     }
   }
 
