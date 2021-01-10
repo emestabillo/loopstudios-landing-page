@@ -1,6 +1,6 @@
 .header {
-  background-image: url("/images/mobile/image-hero.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.4));
+  background: linear-gradient(rgba(0, 0, 0, 0.4)),
+    url("/images/mobile/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: $clr-white;
@@ -9,12 +9,12 @@
   text-transform: uppercase;
 
   @include lg {
-    background-image: url("/images/desktop/image-hero.jpg"),
-      linear-gradient(rgba(0, 0, 0, 0.4));
+    background: linear-gradient(rgba(0, 0, 0, 0.4)),
+      url("/images/desktop/image-hero.jpg");
   }
 
   @include lg {
-    padding: 4.26rem 0 9.73rem;
+    padding: 4.26rem 0 8.73rem;
   }
 
   a {
@@ -30,7 +30,8 @@
 
   @include lg {
     max-width: 43.3rem;
-    padding: 2.67rem;
+    padding: 2.67rem 2.67rem 2rem;
+    margin-top: 8.67rem;
   }
 
   h1 {

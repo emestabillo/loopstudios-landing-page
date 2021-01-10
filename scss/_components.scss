@@ -1,10 +1,11 @@
 .container {
   width: 90%;
-  max-width: 73.3rem;
+  max-width: 74rem;
   margin: 0 auto;
 
   @include lg {
     width: 95%;
+    padding-left: 0.5rem;
   }
 }
 

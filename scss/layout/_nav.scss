@@ -47,8 +47,9 @@
       text-transform: capitalize;
 
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      column-gap: 2.13rem;
+      grid-template-columns: repeat(5, max-content);
+      column-gap: 2.05rem;
+      align-items: end;
     }
 
     li {

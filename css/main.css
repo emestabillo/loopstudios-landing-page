@@ -93,13 +93,14 @@ picture {
 
 .container {
   width: 90%;
-  max-width: 73.3rem;
+  max-width: 74rem;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
   .container {
     width: 95%;
+    padding-left: 0.5rem;
   }
 }
 
@@ -142,8 +143,8 @@ picture {
 }
 
 .header {
-  background-image: url("/images/mobile/image-hero.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)));
-  background-image: url("/images/mobile/image-hero.jpg"), linear-gradient(rgba(0, 0, 0, 0.4));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("/images/mobile/image-hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("/images/mobile/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -154,14 +155,14 @@ picture {
 
 @media screen and (min-width: 992px) {
   .header {
-    background-image: url("/images/desktop/image-hero.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)));
-    background-image: url("/images/desktop/image-hero.jpg"), linear-gradient(rgba(0, 0, 0, 0.4));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("/images/desktop/image-hero.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("/images/desktop/image-hero.jpg");
   }
 }
 
 @media screen and (min-width: 992px) {
   .header {
-    padding: 4.26rem 0 9.73rem;
+    padding: 4.26rem 0 8.73rem;
   }
 }
 
@@ -179,7 +180,8 @@ picture {
 @media screen and (min-width: 992px) {
   #main {
     max-width: 43.3rem;
-    padding: 2.67rem;
+    padding: 2.67rem 2.67rem 2rem;
+    margin-top: 8.67rem;
   }
 }
 
@@ -258,10 +260,14 @@ picture {
     text-transform: capitalize;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
-    -webkit-column-gap: 2.13rem;
-            column-gap: 2.13rem;
+    -ms-grid-columns: (max-content)[5];
+        grid-template-columns: repeat(5, -webkit-max-content);
+        grid-template-columns: repeat(5, max-content);
+    -webkit-column-gap: 2.05rem;
+            column-gap: 2.05rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
   }
 }
 
