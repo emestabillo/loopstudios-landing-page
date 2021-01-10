@@ -248,6 +248,7 @@ picture {
   right: 0;
   left: 0;
   z-index: -1;
+  height: 100vh;
   padding: 14.87rem 1.67rem;
   background-color: black;
   visibility: hidden;
@@ -262,6 +263,7 @@ picture {
   .nav__wrapper {
     position: unset;
     z-index: 0;
+    height: auto;
     visibility: inherit;
     opacity: 1;
     background: inherit;
@@ -547,7 +549,7 @@ picture {
 
 .footer {
   background-color: black;
-  padding-top: 3.73rem;
+  padding-top: 4.47rem;
   text-align: center;
   color: white;
 }
