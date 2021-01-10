@@ -400,7 +400,7 @@ picture {
 .creations {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 12.27rem;
+  padding-bottom: 13rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -409,14 +409,14 @@ picture {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 8.53rem 1fr;
-        grid-template-rows: 8.53rem 1fr;
+    -ms-grid-rows: 3.2rem 1fr;
+        grid-template-rows: 3.2rem 1fr;
         grid-template-areas: "title cta" "gallery gallery";
+    row-gap: 5.33rem;
   }
 }
 
 .creations h2 {
-  padding-bottom: 3.2rem;
   font-size: 2.13rem;
 }
 
@@ -541,6 +541,9 @@ picture {
   .creations__link {
     -ms-grid-column-align: end;
         justify-self: end;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     width: 10.47rem;
     height: 2.67rem;
     margin-top: 0;
@@ -549,7 +552,7 @@ picture {
 
 .footer {
   background-color: black;
-  padding-top: 4.47rem;
+  padding-top: 2.93rem;
   text-align: center;
   color: white;
 }
