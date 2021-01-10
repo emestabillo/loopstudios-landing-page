@@ -2,6 +2,10 @@
   padding: 6.4rem 0;
   text-align: center;
 
+  @include xl {
+    padding: 10.67rem 0 12.27rem;
+  }
+
   &__content {
     @include xl {
       display: flex;
@@ -11,6 +15,7 @@
 
   img {
     margin: 0 auto;
+    flex: 1;
   }
 
   &__text {
@@ -21,6 +26,7 @@
       z-index: 2;
       margin-left: -10.73rem;
       padding: 6.4rem 0 0 6.4rem;
+      flex: 1;
       align-self: flex-end;
       background-color: $clr-white;
     }

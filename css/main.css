@@ -173,7 +173,7 @@ picture {
 #main {
   margin-top: 10.87rem;
   padding: 1.6rem;
-  border: 1px solid white;
+  border: 2px solid white;
   max-width: 32rem;
 }
 
@@ -316,6 +316,12 @@ picture {
 }
 
 @media screen and (min-width: 1200px) {
+  .about {
+    padding: 10.67rem 0 12.27rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .about__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -326,6 +332,9 @@ picture {
 
 .about img {
   margin: 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .about__text {
@@ -338,6 +347,9 @@ picture {
     z-index: 2;
     margin-left: -10.73rem;
     padding: 6.4rem 0 0 6.4rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     -ms-flex-item-align: end;
         align-self: flex-end;
     background-color: white;
@@ -369,7 +381,7 @@ picture {
 .creations {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 6.4rem;
+  padding-bottom: 12.27rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -533,7 +545,9 @@ picture {
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
+    row-gap: 1.6rem;
         grid-template-areas: "logo icons" "nav copyright";
+    padding-bottom: 1.87rem;
   }
 }
 
@@ -545,6 +559,8 @@ picture {
   .footer__logo {
     grid-area: logo;
     margin: 0;
+    width: 9.6rem;
+    height: 1.6rem;
   }
 }
 
@@ -596,6 +612,7 @@ picture {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    padding-bottom: 0;
   }
 }
 
@@ -620,6 +637,7 @@ picture {
   .footer p {
     grid-area: copyright;
     text-align: right;
+    padding-bottom: 0;
   }
 }
 

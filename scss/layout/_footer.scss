@@ -9,7 +9,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      row-gap: 1.6rem;
       grid-template-areas: "logo icons" "nav copyright";
+      padding-bottom: 1.87rem;
     }
   }
 
@@ -19,6 +21,8 @@
     @include med {
       grid-area: logo;
       margin: 0;
+      width: 9.6rem;
+      height: 1.6rem;
     }
   }
 
@@ -56,6 +60,7 @@
 
     @include med {
       justify-content: flex-end;
+      padding-bottom: 0;
     }
 
     a {
@@ -77,6 +82,7 @@
     @include med {
       grid-area: copyright;
       text-align: right;
+      padding-bottom: 0;
     }
   }
 
