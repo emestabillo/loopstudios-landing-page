@@ -5,7 +5,7 @@
   color: $clr-white;
 
   @include lg {
-    padding-top: 2.93rem;
+    padding-top: 2.73rem;
   }
 
   &__contents {
@@ -57,7 +57,6 @@
 
   &__icons {
     grid-area: icons;
-    // padding-bottom: 1.07rem;
     padding-bottom: 1.2rem;
 
     display: grid;
