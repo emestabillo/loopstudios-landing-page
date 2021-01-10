@@ -97,7 +97,7 @@ picture {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .container {
     width: 95%;
   }
@@ -183,8 +183,10 @@ picture {
   }
 }
 
-#main h1 {
-  font-size: 2.67rem;
+@media screen and (min-width: 350px) {
+  #main h1 {
+    font-size: 2.67rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -403,10 +405,44 @@ picture {
   .creations__gallery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(14rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 2rem;
   }
+}
+
+.creations figure {
+  position: relative;
+  margin-bottom: 1.6rem;
+  z-index: 3;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  .creations figure {
+    margin-bottom: 0;
+  }
+}
+
+.creations figure::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.601863)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
+}
+
+.creations figure:hover {
+  color: black;
+}
+
+.creations figure:hover::before {
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .creations picture {
@@ -424,29 +460,9 @@ picture {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
 }
 
-.creations picture:hover::before {
-  background: rgba(255, 255, 255, 0.75071);
-}
-
-.creations figure {
-  position: relative;
-  margin-bottom: 1.6rem;
-  z-index: 3;
-}
-
-@media screen and (min-width: 768px) {
-  .creations figure {
-    margin-bottom: 0;
-  }
-}
-
 .creations img {
   margin: 0 auto;
   width: 100%;
-}
-
-.creations img:hover {
-  background-color: rgba(255, 255, 255, 0.75071);
 }
 
 @media screen and (min-width: 768px) {
@@ -457,7 +473,7 @@ picture {
 
 .creations figcaption {
   font-family: "Josefin Sans", sans-serif;
-  color: white;
+  cursor: pointer;
   font-size: 1.6rem;
   position: absolute;
   bottom: 1.3rem;
@@ -471,6 +487,8 @@ picture {
   .creations figcaption {
     font-size: 2.13rem;
     width: 11.3rem;
+    left: 2.66rem;
+    bottom: 2.13rem;
   }
 }
 
@@ -501,7 +519,7 @@ picture {
   color: white;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer__contents {
     display: -ms-grid;
     display: grid;
@@ -517,7 +535,7 @@ picture {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer__logo {
     grid-area: logo;
     margin: 0;
@@ -528,7 +546,7 @@ picture {
   padding: 2.13rem 0 3.2rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer__nav {
     grid-area: nav;
     display: -webkit-box;
@@ -543,7 +561,7 @@ picture {
   padding-bottom: 1.06rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer__nav li:not(:last-child) {
     padding: 0;
   }
@@ -567,7 +585,7 @@ picture {
           justify-content: center;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer__icons {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -592,7 +610,7 @@ picture {
   padding-bottom: 2.73rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .footer p {
     grid-area: copyright;
     text-align: right;
@@ -610,5 +628,11 @@ picture {
   font-size: inherit;
   color: white;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.footer .attribution a:hover {
+  color: #c355d8;
 }
 /*# sourceMappingURL=main.css.map */

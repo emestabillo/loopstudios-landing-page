@@ -5,7 +5,7 @@
   color: $clr-white;
 
   &__contents {
-    @include lg {
+    @include med {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -16,7 +16,7 @@
   &__logo {
     margin: 0 auto;
 
-    @include lg {
+    @include med {
       grid-area: logo;
       margin: 0;
     }
@@ -25,7 +25,7 @@
   &__nav {
     padding: 2.13rem 0 3.2rem;
 
-    @include lg {
+    @include med {
       grid-area: nav;
       display: flex;
       gap: 2.13rem;
@@ -35,7 +35,7 @@
     li:not(:last-child) {
       padding-bottom: 1.06rem;
 
-      @include lg {
+      @include med {
         padding: 0;
       }
     }
@@ -54,7 +54,7 @@
     gap: 1.07rem;
     justify-content: center;
 
-    @include lg {
+    @include med {
       justify-content: flex-end;
     }
 
@@ -74,7 +74,7 @@
     opacity: 0.5;
     padding-bottom: 2.73rem;
 
-    @include lg {
+    @include med {
       grid-area: copyright;
       text-align: right;
     }
@@ -90,6 +90,11 @@
       font-size: inherit;
       color: $clr-white;
       text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $clr-pink;
+      }
     }
   }
 }
