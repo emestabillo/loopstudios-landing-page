@@ -40,8 +40,8 @@ body {
 
 @media screen and (min-width: 1441px) {
   body {
-    -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 34px 40px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 34px 40px 12px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -89,6 +89,17 @@ picture {
 .skip-links:focus {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .container {
@@ -237,6 +248,7 @@ picture {
   right: 0;
   left: 0;
   z-index: -1;
+  height: 100vh;
   padding: 14.87rem 1.67rem;
   background-color: black;
   visibility: hidden;
@@ -251,6 +263,7 @@ picture {
   .nav__wrapper {
     position: unset;
     z-index: 0;
+    height: auto;
     visibility: inherit;
     opacity: 1;
     background: inherit;
@@ -387,7 +400,7 @@ picture {
 .creations {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 12.27rem;
+  padding-bottom: 13rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -396,14 +409,14 @@ picture {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 8.53rem 1fr;
-        grid-template-rows: 8.53rem 1fr;
+    -ms-grid-rows: 3.2rem 1fr;
+        grid-template-rows: 3.2rem 1fr;
         grid-template-areas: "title cta" "gallery gallery";
+    row-gap: 5.33rem;
   }
 }
 
 .creations h2 {
-  padding-bottom: 3.2rem;
   font-size: 2.13rem;
 }
 
@@ -429,9 +442,16 @@ picture {
   .creations__gallery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .creations__gallery {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -460,6 +480,8 @@ picture {
   top: 28.89%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.601863)));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .creations figure:hover {
@@ -473,17 +495,6 @@ picture {
 
 .creations picture {
   position: relative;
-}
-
-.creations picture::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.601863)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
 }
 
 .creations img {
@@ -509,9 +520,15 @@ picture {
   z-index: 5;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .creations figcaption {
     font-size: 2.13rem;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .creations figcaption {
     width: 11.3rem;
     left: 2.66rem;
     bottom: 2.13rem;
@@ -532,6 +549,9 @@ picture {
   .creations__link {
     -ms-grid-column-align: end;
         justify-self: end;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     width: 10.47rem;
     height: 2.67rem;
     margin-top: 0;
@@ -545,7 +565,13 @@ picture {
   color: white;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .footer {
+    padding-top: 2.93rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .footer__contents {
     display: -ms-grid;
     display: grid;
@@ -563,7 +589,7 @@ picture {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__logo {
     grid-area: logo;
     margin: 0;
@@ -576,7 +602,7 @@ picture {
   padding: 2.13rem 0 3.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__nav {
     grid-area: nav;
     display: -webkit-box;
@@ -591,7 +617,7 @@ picture {
   padding-bottom: 1.06rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__nav li:not(:last-child) {
     padding: 0;
   }
@@ -605,17 +631,22 @@ picture {
 
 .footer__icons {
   grid-area: icons;
-  padding-bottom: 1.07rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.07rem;
+  padding-bottom: 1.2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1.6rem)[4];
+      grid-template-columns: repeat(4, 1.6rem);
+  -webkit-column-gap: 1.07rem;
+          column-gap: 1.07rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__icons {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -641,7 +672,7 @@ picture {
   padding-bottom: 2.73rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer p {
     grid-area: copyright;
     text-align: right;

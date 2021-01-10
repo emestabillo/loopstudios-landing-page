@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -19,17 +17,6 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <title>Frontend Mentor | Loopstudios landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style> -->
   </head>
   <body>
     <a href="#main" class="skip-links">Skip to content</a>
@@ -43,7 +30,8 @@
               alt="loopstudios logo"
             />
           </a>
-          <button class="nav__toggle" aria-haspopup="true" aria-expanded="false" type="button">
+          <button class="nav__toggle" aria-expanded="false" type="button">
+            <span class="visually-hidden" aria-hidden="true">toggle menu open and close</span>
             <img src="images/icon-hamburger.svg" class="menu-icon" alt="" />
           </button>
           <ul class="nav__wrapper">
@@ -86,102 +74,102 @@
         <div class="creations__content">
           <h2>Our creations</h2>
           <div class="creations__gallery">
-            <figure>
-              <a href="/">
+            <a href="/">
+              <figure>
                 <picture>
-                  <source media="(max-width: 767px)" srcset="images/mobile/image-deep-earth.jpg" >
-                  <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-deep-earth.jpg" alt="deep earth project">
+                  <source srcset="images/mobile/image-deep-earth.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-deep-earth.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-deep-earth.jpg" alt="view of earth in outer space">
                 </picture>
-              </a>
-              <figcaption>
-                Deep earth
-              </figcaption>     
-            </figure>
-            <figure>
-              <a href="/" >
+                <figcaption>
+                  Deep earth
+                </figcaption>     
+              </figure>
+            </a>
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-night-arcade.jpg" alt="night arcade project">
+                  <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-night-arcade.jpg" alt="skee ball arcade game">
                 </picture>
-              </a>
-              <figcaption>
-                Night arcade
-              </figcaption>           
-            </figure>
-            <figure>
-              <a href="/" >                
+                <figcaption>
+                  Night arcade
+                </figcaption>     
+              </figure>
+            </a>
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-soccer-team.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-soccer-team.jpg" alt="soccer team vr project">
+                  <source srcset="images/mobile/image-soccer-team.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-soccer-team.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-soccer-team.jpg" alt="soccer player">
                 </picture>
-              </a>
-              <figcaption>
-                Soccer team VR
-              </figcaption>           
-            </figure>              
-            <figure>
-              <a href="/" >
+                <figcaption>
+                  Soccer team VR
+                </figcaption>     
+              </figure>
+            </a>           
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-grid.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-grid.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-grid.jpg" alt="the grid project">
+                  <source srcset="images/mobile/image-grid.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-grid.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-grid.jpg" alt="race car">
                 </picture>
-              </a>
-              <figcaption>
-                The grid
-              </figcaption>           
-            </figure>
-            <figure>
-              <a href="/" >                
+                <figcaption>
+                  The grid
+                </figcaption>     
+              </figure>
+            </a>    
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-from-above.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-from-above.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-from-above.jpg" alt="from up above vr project">
+                  <source srcset="images/mobile/image-from-above.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-from-above.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-from-above.jpg" alt="aerial view of winding road">
                 </picture>
-              </a> 
-              <figcaption>
-                From up above VR
-              </figcaption>           
-            </figure>
-            <figure>
-              <a href="/" >
+                <figcaption>
+                  From up above VR
+                </figcaption>     
+              </figure>
+            </a>
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-pocket-borealis.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-pocket-borealis.jpg" alt="pocket borealis project">
+                  <source srcset="images/mobile/image-pocket-borealis.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-pocket-borealis.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-pocket-borealis.jpg" alt="northern lights">
                 </picture>
-              </a>
-              <figcaption>
-                Pocket borealis
-              </figcaption>           
-            </figure>          
-            <figure>
-              <a href="/" >             
+                <figcaption>
+                  Pocket borealis
+                </figcaption>     
+              </figure>
+            </a>        
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-curiosity.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-curiosity.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-curiosity.jpg" alt="the curiosity project">
+                  <source srcset="images/mobile/image-curiosity.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-curiosity.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-curiosity.jpg" alt="mars exploration rover">
                 </picture>
-              </a>
-              <figcaption>
-                The curiosity
-              </figcaption>           
-            </figure>              
-            <figure>
-              <a href="/" >
+                <figcaption>
+                  The curiosity
+                </figcaption>
+              </figure>
+            </a>
+            <a href="/">
+              <figure>
                 <picture>
-                  <source srcset="images/mobile/image-fisheye.jpg" media="(max-width: 767px)">
-                  <source srcset="images/desktop/image-fisheye.jpg" media="(min-width: 768px)">
-                  <img src="images/mobile/image-fisheye.jpg" alt="make it fisheye project">
+                  <source srcset="images/mobile/image-fisheye.jpg" media="(max-width: 1199px)"  >
+                  <source srcset="images/desktop/image-fisheye.jpg" media="(min-width: 1200px)">
+                  <img src="images/mobile/image-fisheye.jpg" alt="land view through a fisheye lens">
                 </picture>
-              </a>
-              <figcaption>
-                Make it fisheye
-              </figcaption>           
-            </figure>                   
+                <figcaption>
+                  Make it fisheye
+                </figcaption>     
+              </figure>
+            </a>         
           </div> <!--gallery end -->
           <a href="/" class="creations__link cta">See all</a>
         </div>       

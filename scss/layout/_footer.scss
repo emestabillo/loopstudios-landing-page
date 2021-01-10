@@ -4,8 +4,12 @@
   text-align: center;
   color: $clr-white;
 
+  @include lg {
+    padding-top: 2.93rem;
+  }
+
   &__contents {
-    @include med {
+    @include lg {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
@@ -18,7 +22,7 @@
   &__logo {
     margin: 0 auto;
 
-    @include med {
+    @include lg {
       grid-area: logo;
       margin: 0;
       width: 9.6rem;
@@ -29,7 +33,7 @@
   &__nav {
     padding: 2.13rem 0 3.2rem;
 
-    @include med {
+    @include lg {
       grid-area: nav;
       display: flex;
       gap: 2.13rem;
@@ -39,7 +43,7 @@
     li:not(:last-child) {
       padding-bottom: 1.06rem;
 
-      @include med {
+      @include lg {
         padding: 0;
       }
     }
@@ -53,12 +57,15 @@
 
   &__icons {
     grid-area: icons;
-    padding-bottom: 1.07rem;
-    display: flex;
-    gap: 1.07rem;
-    justify-content: center;
+    padding-bottom: 1.2rem;
 
-    @include med {
+    display: grid;
+    grid-template-columns: repeat(4, 1.6rem);
+    column-gap: 1.07rem;
+    justify-content: center;
+    align-items: center;
+
+    @include lg {
       justify-content: flex-end;
       padding-bottom: 0;
     }
@@ -79,7 +86,7 @@
     opacity: 0.5;
     padding-bottom: 2.73rem;
 
-    @include med {
+    @include lg {
       grid-area: copyright;
       text-align: right;
       padding-bottom: 0;
