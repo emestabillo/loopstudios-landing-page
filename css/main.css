@@ -518,9 +518,15 @@ picture {
   z-index: 5;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .creations figcaption {
     font-size: 2.13rem;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .creations figcaption {
     width: 11.3rem;
     left: 2.66rem;
     bottom: 2.13rem;
@@ -552,12 +558,18 @@ picture {
 
 .footer {
   background-color: black;
-  padding-top: 2.93rem;
+  padding-top: 3.73rem;
   text-align: center;
   color: white;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .footer {
+    padding-top: 2.93rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .footer__contents {
     display: -ms-grid;
     display: grid;
@@ -575,7 +587,7 @@ picture {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__logo {
     grid-area: logo;
     margin: 0;
@@ -588,7 +600,7 @@ picture {
   padding: 2.13rem 0 3.2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__nav {
     grid-area: nav;
     display: -webkit-box;
@@ -603,7 +615,7 @@ picture {
   padding-bottom: 1.06rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__nav li:not(:last-child) {
     padding: 0;
   }
@@ -617,17 +629,22 @@ picture {
 
 .footer__icons {
   grid-area: icons;
-  padding-bottom: 1.07rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.07rem;
+  padding-bottom: 1.2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1.6rem)[4];
+      grid-template-columns: repeat(4, 1.6rem);
+  -webkit-column-gap: 1.07rem;
+          column-gap: 1.07rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer__icons {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -653,7 +670,7 @@ picture {
   padding-bottom: 2.73rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer p {
     grid-area: copyright;
     text-align: right;

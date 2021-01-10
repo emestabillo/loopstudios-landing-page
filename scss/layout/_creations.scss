@@ -115,8 +115,13 @@
     text-align: left;
     z-index: 5;
 
-    @include med {
+    @include lg {
       font-size: 2.13rem;
+      width: auto;
+    }
+
+    @include xl {
+      // font-size: 2.13rem;
       width: 11.3rem;
       left: 2.66rem;
       bottom: 2.13rem;
