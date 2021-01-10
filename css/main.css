@@ -337,6 +337,12 @@ picture {
           flex: 1;
 }
 
+@media screen and (min-width: 1200px) {
+  .about img {
+    height: 33.33rem;
+  }
+}
+
 .about__text {
   padding: 3.2rem 1rem 0;
 }

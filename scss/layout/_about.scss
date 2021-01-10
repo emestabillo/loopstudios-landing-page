@@ -16,6 +16,10 @@
   img {
     margin: 0 auto;
     flex: 1;
+
+    @include xl {
+      height: 33.33rem;
+    }
   }
 
   &__text {
