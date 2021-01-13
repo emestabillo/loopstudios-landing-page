@@ -1,7 +1,7 @@
 .creations {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 13rem;
+  padding-bottom: 6.4rem;
 
   &__content {
     @include med {
@@ -10,6 +10,7 @@
       grid-template-rows: 3.2rem 1fr;
       grid-template-areas: "title cta" "gallery gallery";
       row-gap: 3.2rem;
+      padding-bottom: 12.27rem;
     }
 
     @include lg {
