@@ -3,6 +3,10 @@
   text-transform: uppercase;
   padding-bottom: 6.4rem;
 
+  @include med {
+    padding-bottom: 12.27rem;
+  }
+
   &__content {
     @include med {
       display: grid;
@@ -10,7 +14,6 @@
       grid-template-rows: 3.2rem 1fr;
       grid-template-areas: "title cta" "gallery gallery";
       row-gap: 3.2rem;
-      padding-bottom: 12.27rem;
     }
 
     @include lg {

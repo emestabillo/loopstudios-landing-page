@@ -403,7 +403,13 @@ picture {
 .creations {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 13rem;
+  padding-bottom: 6.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .creations {
+    padding-bottom: 12.27rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
