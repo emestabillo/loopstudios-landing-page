@@ -21,6 +21,7 @@ User Stories:
 - SCSS
 - BEM
 - Grid and Flexbox
+- Figma
 - [Animate On Scroll library](https://michalsnik.github.io/aos/)
 - [Perfect Pixel](https://www.welldonecode.com/perfectpixel)
 
@@ -30,10 +31,11 @@ My focus for this project is to improve accessibility practices. I was able to i
 
 1. Skip links
 2. Screen-reader only text
-3. Styling focus outlines
-4. Meaningful `alt` text
-5. Subtle scroll animations and transitions
-6. Use of `srcset` and `source` for `<picture>` tags
+3. ARIA labels
+4. Styling focus outlines
+5. Meaningful `alt` text
+6. Subtle scroll animations and transitions
+7. Use of `srcset` and `source` for `<picture>` tags
 
 ## My profile at Frontendmentor
 
